@@ -16,7 +16,11 @@
   <tbody>
     <% @dojos.each do |dojo| %>
       <tr>
-        <td><%= dojo.branch %></td>
+        <td>
+          <a href="/dojos/<%= dojo.id %>">
+            <%= dojo.branch %>
+          </a>
+        </td>
         <td><%= dojo.street %></td>
         <td><%= dojo.city %></td>
         <td><%= dojo.state %></td>

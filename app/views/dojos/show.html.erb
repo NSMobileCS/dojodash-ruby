@@ -19,6 +19,18 @@
   <strong>State:</strong>
   <%= @dojo.state %>
 </p>
+<hr><hr><hr>
+<h2>Student Roster</h2>
+<hr><hr>
+<ul>
+  <%= @students.each do |student| %>
+    <li>
+    <%= putsstudent  %>
+      <a href="/dojos/<%= @dojo.id %>/students/<%= student.id %>">
+        <%= student.first_name %> <%= student.last_name %>
+      </a>
+    </li>
+</ul>
 
 <%= link_to 'Edit', edit_dojo_path(@dojo) %> |
 <%= link_to 'Back', dojos_path %>

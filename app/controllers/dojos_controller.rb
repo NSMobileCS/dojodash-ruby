@@ -4,12 +4,14 @@ class DojosController < ApplicationController
   # GET /dojos
   # GET /dojos.json
   def index
+    # console
     @dojos = Dojo.all
   end
 
   # GET /dojos/1
   # GET /dojos/1.json
   def show
+    @students = Student.where(dojo: Dojo.find(params[:id]))
   end
 
   # GET /dojos/new
